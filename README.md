@@ -1,74 +1,71 @@
-<!-- Write a README for the project  -->
+# Environment Setup Guide
 
-# Benin EDA Project
+Follow these steps to set up your Python environment for the Benin EDA Project.
 
-This project provides an exploratory data analysis (EDA) of solar and meteorological data for Benin (Malanville). The analysis focuses on data cleaning, outlier detection, missing value imputation, and visualization of key variables such as solar irradiance, temperature, wind, and humidity.
+## 1. Clone the Repository
 
-## Project Structure
+```bash
+git clone https://github.com/your-username/kifiya-week-0.git
+cd kifiya-week-0
+```
 
-- **notebooks/benin_eda.ipynb**: Main Jupyter notebook containing all analysis steps and visualizations.
-- **data/**: Folder containing the raw and cleaned CSV data files.
+## 2. Create a Virtual Environment (Recommended)
 
-## Main Steps
+**Using `venv`:**
 
-1. **Data Loading & Overview**
-   - Loads the dataset and inspects its structure and missing values.
+```bash
+python -m venv venv
+```
 
-2. **Missing Value Handling**
-   - Identifies columns with significant missing data.
-   - Imputes missing values in key columns using the median.
+Activate the environment:
 
-3. **Outlier Detection & Removal**
-   - Uses Z-score to flag and remove outliers from key columns.
+- On Windows:
+  ```bash
+  venv\Scripts\activate
+  ```
+- On macOS/Linux:
+  ```bash
+  source venv/bin/activate
+  ```
 
-4. **Data Export**
-   - Saves the cleaned dataset for further analysis.
+## 3. Install Dependencies
 
-5. **Time Series Analysis**
-   - Plots time series for solar and temperature variables.
-   - Computes and visualizes monthly and hourly means.
+Install all required Python packages using pip:
 
-6. **Wind & Distribution Analysis**
-   - Creates a wind rose (radial bar plot) for wind speed and direction.
-   - Plots histograms for GHI and wind speed.
+```bash
+pip install -r requirements.txt
+```
 
-7. **Temperature & Humidity Analysis**
-   - Examines the relationship between relative humidity (RH), temperature (Tamb), and solar radiation (GHI) using scatter plots and correlation coefficients.
+Or, if you don’t have a `requirements.txt`, install the main dependencies:
 
-8. **Bubble Chart Visualization**
-   - Visualizes GHI vs. Tamb with bubble size and color representing RH.
-
-## Requirements
-
-- Python 3.8+
-- pandas
-- numpy
-- matplotlib
-- seaborn
-- scipy
-
-Install dependencies with:
 ```bash
 pip install pandas numpy matplotlib seaborn scipy
 ```
 
-## Usage
+## 4. (Optional) Using Conda
 
-1. Place your raw data CSV in the `data/` folder.
-2. Open and run the notebook `notebooks/benin_eda.ipynb` step by step.
-3. The cleaned data will be saved as `data/benin-malanville_clean.csv`.
+If you prefer Conda, create an environment and install dependencies:
 
-## Results
+```bash
+conda create -n benin-eda python=3.11
+conda activate benin-eda
+pip install -r requirements.txt
+```
 
-The notebook provides:
-- Cleaned and preprocessed data ready for modeling or further analysis.
-- Visual insights into the distribution and temporal patterns of solar and meteorological variables in Benin.
-- Exploratory relationships between temperature, humidity, and solar radiation.
+## 5. Verify Installation
+
+Check Python and package versions:
+
+```bash
+python --version
+pip list
+```
+
+## 6. Run the Notebook
+
+Open Jupyter Notebook or VS Code and run `notebooks/benin_eda.ipynb` step by step.
 
 ---
 
-**Author:**  
-Kifiya Week 0 Project Team
-
-**License:**  
-MIT License
+**Tip:**  
+If you add or update packages, run `pip freeze > requirements.txt` to update your dependency list.
