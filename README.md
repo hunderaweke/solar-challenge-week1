@@ -58,7 +58,7 @@ kifiya-week-0/
 
 ## 🖼️ Screenshots
 
-![Dashaboard](screenshots/image.png)
+![Dashaboard](dashboard_screenshots/image.png)
 
 _You can add your own screenshots in `notebooks/screenshots/` for more visual context!_
 
@@ -69,8 +69,8 @@ _You can add your own screenshots in `notebooks/screenshots/` for more visual co
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/kifiya-week-0.git
-cd kifiya-week-0
+git clone https://github.com/hunderaweke/solar-challenge-week1.git
+cd solar-challenge-week1
 ```
 
 ### 2. Create a Virtual Environment (Recommended)
